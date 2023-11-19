@@ -18,6 +18,19 @@
                 return "scissor";
             }
         }
+
+        const playerSelection = prompt("Choose rock, paper, or scissor").toLowerCase();
+        const computerSelection = getComputerChoice();
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === "rock" && computerSelection === "scissor" ||
+            playerSelection === "paper" && computerSelection === "rock" || 
+            playerSelection === "scissor" && computerSelection === "paper") {
+                return "player won"
+            } else {
+                return "computer won"
+            }
+        }
     </script>
 </body>
 </html>
