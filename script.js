@@ -2,6 +2,7 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissor = document.querySelector('#scissor');
 const result = document.querySelector('#results')
+const replay = document.querySelector('#replay')
 let playerWon = 0;
 let computerWon = 0;
 
@@ -52,3 +53,11 @@ scissor.addEventListener('click', () => {
         return result.textContent = `Computer picked scissors, it's a draw!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
     }
 });
+
+replay.textContent = 'Replay'
+replay.addEventListener('click', () => {
+    playerWon = 0;
+    computerWon = 0;
+})
+
+result.appendChild(rock, paper, scissor)
