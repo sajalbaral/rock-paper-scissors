@@ -22,34 +22,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    let playerWon = 0;
-    let computerWon = 0;
-
-    for (let i = 0; i < 5; i++) {
-        const computerSelection = getComputerChoice();
-
-        playRound(playerSelection, computerSelection)
-
-        if (playRound(playerSelection, computerSelection) === "computer won") {
-            computerWon++
-            console.log("player won: " + playerWon + " " + "computer won: " + computerWon)
-        } else if (playRound(playerSelection, computerSelection) ==="its a draw"){
-            playerWon++
-            console.log("player won: " + playerWon + " " + "computer won: " + computerWon)
-        } else{
-            console.log("its a draw")
-            i--;
-        }
-    }
-
-    if (playerWon > computerWon) {
-        return "player won the set"
-    } else {
-        return "computer won the set"
-    }
-}  
-
 const rock = document.querySelector('#rock')
 const paper = document.querySelector('#paper')
 const scissor = document.querySelector('#scissor')
