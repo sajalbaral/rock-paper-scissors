@@ -3,65 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Rock-Paper-Scissor</title>
 </head>
 <body>
-    <script>
-        function getComputerChoice() {
-            let randomChoice = (Math.floor(Math.random() * 3)) + 1;
-
-            if (randomChoice == 1) {
-                return "rock";
-            } else if (randomChoice == 2) {
-                return "paper";
-            } else {
-                return "scissor";
-            }
-        }
-
-        function playRound(playerSelection, computerSelection) {
-            if (playerSelection === "rock" && computerSelection === "scissor" ||
-            playerSelection === "paper" && computerSelection === "rock" || 
-            playerSelection === "scissor" && computerSelection === "paper") {
-                return "player won"
-            } else if (playerSelection === computerSelection) {
-                return "its a draw"
-            } else {
-                return "computer won"
-            }
-        }
-
-        function game() {
-            let playerWon = 0;
-            let computerWon = 0;
-
-            for (let i = 0; i < 5; i++) {
-                const playerSelection = prompt("Choose rock, paper, or scissor").toLowerCase();
-                const computerSelection = getComputerChoice();
-
-                playRound(playerSelection, computerSelection)
-
-                if (playRound(playerSelection, computerSelection) === "computer won") {
-                    computerWon++
-                    console.log("player won: " + playerWon + " " + "computer won: " + computerWon)
-                } else if (playRound(playerSelection, computerSelection) ==="its a draw"){
-                    playerWon++
-                    console.log("player won: " + playerWon + " " + "computer won: " + computerWon)
-                } else{
-                    console.log("its a draw")
-                    i--;
-                }
-            }
-
-            if (playerWon > computerWon) {
-                return "player won the set"
-            } else {
-                return "computer won the set"
-            }
-        }  
-
-        console.log(game())
-
-    </script>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissor">Scissor</button>
 </body>
 </html>
