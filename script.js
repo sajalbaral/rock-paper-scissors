@@ -47,9 +47,11 @@ function checkWon() {
         rock.disabled = true;
         paper.disabled = true;
         scissor.disabled = true;
-        result.textContent = 'The computer reached 5 points first. Try again. . .!'
+        result.textContent = 'The computer reached 5 points first. Try again. . .'
     }
 }
+
+result.textContent = 'Click to play!'
 
 rock.addEventListener('click', () => {
     result.textContent = playRound(rock.value);
@@ -72,5 +74,5 @@ playAgain.addEventListener('click', () =>{
     paper.disabled = false;
     scissor.disabled = false;
 
-    return result.textContent = `Click to play. Player: ${playerWon} Computer: ${computerWon}`; 
+    return result.textContent = `Click to play!`; 
 });
