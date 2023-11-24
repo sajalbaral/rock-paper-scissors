@@ -51,7 +51,7 @@ function checkWon() {
     }
 }
 
-result.textContent = 'Click to play!'
+result.textContent = 'Click to play. First to 5 points win!'
 
 rock.addEventListener('click', () => {
     result.textContent = playRound(rock.value);
@@ -74,5 +74,5 @@ playAgain.addEventListener('click', () =>{
     paper.disabled = false;
     scissor.disabled = false;
 
-    return result.textContent = `Click to play!`; 
+    return result.textContent = `Click to play. First to 5 points win!`; 
 });
