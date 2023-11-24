@@ -1,8 +1,8 @@
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissor = document.querySelector('#scissor');
-const result = document.querySelector('#results')
-const replay = document.querySelector('#replay')
+const result = document.querySelector('#result');
+const retry = document.querySelector('#retry')
 let playerWon = 0;
 let computerWon = 0;
 
@@ -16,48 +16,35 @@ function getComputerChoice() {
     } else {
         return 'scissor';
     }
-};
+}
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === 'rock' && computerSelection === 'scissor' ||
+    playerSelection === 'paper' && computerSelection === 'rock' || 
+    playerSelection === 'scissor' && computerSelection === 'paper') {
+        playerWon++;
+        return `You won! Player: ${playerWon} Computer: ${computerWon}`; 
+    } else if (playerSelection === computerSelection) {
+        return `It's a draw! Player: ${playerWon} Computer: ${computerWon}`; 
+    } else {
+        computerWon++;
+        return `You lost. . . Player: ${playerWon} Computer: ${computerWon}`;
+    }  
+}
 
 rock.addEventListener('click', () => {
-    if(getComputerChoice() === 'rock') {
-        return result.textContent = `Computer picked rock, it's a draw!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    } else if (getComputerChoice() === 'paper') {
-        computerWon++
-        return result.textContent = `Computer picked paper, you lose!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    } else {
-        playerWon++
-        return result.textContent = `Computer picked scissors, you won!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    }
+    return result.textContent = playRound(rock.value, getComputerChoice());
 });
-
 paper.addEventListener('click', () => {
-    if(getComputerChoice() === 'rock') {
-        playerWon++
-        return result.textContent = `Computer picked rock, you won!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    } else if (getComputerChoice() === 'paper') {
-        return result.textContent = `Computer picked paper, it's a draw!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    } else {
-        computerWon++
-        return result.textContent = `Computer picked scissors, you lose!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    }
+    return result.textContent = playRound(paper.value, getComputerChoice());
 });
-
 scissor.addEventListener('click', () => {
-    if(getComputerChoice() === 'rock') {
-        computerWon++
-        return result.textContent = `Computer picked rock, you lose!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    } else if (getComputerChoice() === 'paper') {
-        playerWon++
-        return result.textContent = `Computer picked paper, you won!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    } else {
-        return result.textContent = `Computer picked scissors, it's a draw!` + ` Player: ${playerWon}` + ` Computer: ${computerWon}`
-    }
+    return result.textContent = playRound(scissor.value, getComputerChoice());
 });
 
-replay.textContent = 'Replay'
-replay.addEventListener('click', () => {
+retry.textContent = 'Retry';
+retry.addEventListener('click', () =>{
     playerWon = 0;
     computerWon = 0;
-})
-
-result.appendChild(rock, paper, scissor)
+    return result.textContent = `Click to play. Player: ${playerWon} Computer: ${computerWon}`; 
+});
