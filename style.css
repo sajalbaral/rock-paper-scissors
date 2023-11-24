@@ -22,6 +22,11 @@ h1 {
     font-size: 64px;
 }
 
+footer {
+    text-align: center;
+    padding-top: 40px;
+}
+
 .btn {
     height: 20rem;
     width: 20rem;
