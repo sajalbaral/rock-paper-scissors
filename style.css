@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+    border: none;
+}
+
+body {
+    background-color: #393E46;
+    color: white;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    background-color: #00ADB5;
+    font-size: 64px;
+}
+
+.btn {
+    height: 20rem;
+    width: 20rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rps {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+#result {
+    padding: 60px;
+    font-size: 38px;
+}
+
+#rock {
+    background: url(img/rock.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#paper {
+    background: url(img/paper.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#scissor {
+    background: url(img/scissor.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#playAgain {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 4rem;
+    background-color: #EEEEEE;
+}
+
+#rock:hover,
+#scissor:hover,
+#paper:hover {
+    background-color: #EEEEEE;
+    border-radius: 50%;
+}
+
+#playAgain:hover {
+    background-color: #00ADB5;
+}
