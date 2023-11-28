@@ -1,6 +1,6 @@
 # rock-paper-scissors
 
-As of now, this is a browser game played in the console.
+This project was built originally to be played on the console of a browser but as I developed my skills, it can now be played on the webpage.
 
 Skills developed with this project:
 
