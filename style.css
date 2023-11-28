@@ -41,8 +41,8 @@ footer {
 .rps {
     display: flex;
     justify-content: center;
-    gap: 50px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 #result {
