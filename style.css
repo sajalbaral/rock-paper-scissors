@@ -1,89 +1,63 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-button {
-    border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #393E46;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    color: white;
-    background-color: #00ADB5;
-    font-size: 64px;
+button {
+  padding: 40px;
+  margin: 30px;
+  border: 10px solid black;
+  border-radius: 50%;
+  background-color: #eeeeee;
 }
 
-footer {
-    text-align: center;
-    padding-top: 40px;
+button:hover {
+  transform: scale(1.1);
+  transition: transform 300ms ease-in-out;
 }
 
-.btn {
-    height: 20rem;
-    width: 20rem;
+img {
+  width: 200px;
+  height: 200px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.rps {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
+.header {
+  padding: 20px;
+  font-size: 32px;
+  background-color: #eeeeee;
+  width: 100%;
+  text-align: center;
+  border-bottom: 5px solid black;
 }
 
 #result {
-    padding: 60px;
-    font-size: 38px;
+  padding: 20px;
+  font-size: 38px;
+  text-align: center;
+  font-size: 24px;
 }
 
-#rock {
-    background: url(img/rock.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#paper {
-    background: url(img/paper.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#scissor {
-    background: url(img/scissor.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#playAgain {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    border-radius: 10px;
-    margin-top: 4rem;
-    background-color: #EEEEEE;
-}
-
-#rock:hover,
-#scissor:hover,
-#paper:hover {
-    background-color: #EEEEEE;
-    border-radius: 50%;
-}
-
-#playAgain:hover {
-    background-color: #00ADB5;
+footer {
+  padding: 20px;
+  background-color: #eeeeee;
+  width: 100%;
+  text-align: center;
+  border-top: 5px solid black;
 }
